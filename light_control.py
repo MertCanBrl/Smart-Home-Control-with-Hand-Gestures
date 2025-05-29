@@ -167,3 +167,4 @@ class light_control:
     def release(self):
         self.cap.release()
         cv2.destroyAllWindows()
+        
