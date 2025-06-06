@@ -6,7 +6,6 @@ from PIL import Image, ImageTk
 
 from light_control import light_control
 from light_logger import log_light_status
-
 from air_control import air_control
 from air_logger import log_air_status
 
