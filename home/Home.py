@@ -5,7 +5,7 @@ from PIL import Image, ImageTk
 from Home.BedRoom import BedRoom
 from Home.Kitchen import Kitchen
 from Home.LivingRoom import LivingRoom
-# from Home.ChildRoom import ChildRoom  # Eğer ChildRoom.py hazırsa eklemen gerekir
+from Home.ChildRoom import ChildRoom
 
 class Home:
     def __init__(self, root, previous_screen=None):
@@ -91,8 +91,9 @@ class Home:
         BedRoom(self.root, self.previous_screen)
 
     def open_childroom(self):
-        # ChildRoom(self.root, self.previous_screen)
-        print("ChildRoom button clicked. Add implementation here.")
+        for widget in self.root.winfo_children():
+            widget.destroy()
+        ChildRoom(self.root, self.previous_screen)
 
     def open_livingroom(self):
         for widget in self.root.winfo_children():
